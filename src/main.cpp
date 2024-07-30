@@ -450,8 +450,8 @@ void log(Image &R, const char *filename) {
 }
 
 
-const double sigma_s = 10.0;	// \in [3, 15]
-const double sigma_r = 0.07;	// \in [0.02, 0.09]
+const double sigma_s = 9.0;	// \in [3, 15]
+const double sigma_r = 0.09;	// \in [0.02, 0.09]
 const double alpha = 0.5;
 
 int main(int argc, char* argv[]) {
