@@ -8,6 +8,10 @@
 #include <iostream>
 #include <string>
 
+const double sigma_s = 9.0;		// \in [3, 15]
+const double sigma_r = 0.07;	// \in [0.02, 0.09]
+const double alpha = 0.5;
+
 struct Image {
 	int width, height, channels;
 	std::vector<std::vector<std::vector<double>>> data; // [0.0, 1.0] for each value
@@ -448,11 +452,6 @@ void log(Image &R, const char *filename) {
 	R.write_image(R_filename.c_str());
 	std::cout << "exported " << R_filename << std::endl;
 }
-
-
-const double sigma_s = 9.0;	// \in [3, 15]
-const double sigma_r = 0.09;	// \in [0.02, 0.09]
-const double alpha = 0.5;
 
 int main(int argc, char* argv[]) {
 	if (argc < 2) {
